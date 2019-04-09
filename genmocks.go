@@ -47,7 +47,7 @@ func findInterface(iface string, srcDir string) (path string, id string, err err
 		return "", "", fmt.Errorf("couldn't parse interface: %s", iface)
 	}
 
-	srcPath := filepath.Join(srcDir, "__go_impl__.go")
+	srcPath := filepath.Join(srcDir, "/hack/__go_impl__.go")
 
 	if slash := strings.LastIndex(iface, "/"); slash > -1 {
 		// package path provided
